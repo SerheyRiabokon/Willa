@@ -1,0 +1,35 @@
+.wrapp{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 100;    
+    .chevrone{
+        outline: none;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        opacity: 0.75;
+        background-color: white;
+        width: 34px;
+        height: 22px;
+        span{
+            display: block;
+            width: 22px;
+            height: 2px;
+            margin-bottom: 7px;
+            position: relative;
+            background: #10100F;
+            opacity: 0.8;
+        } 
+        }
+        span:first-child{
+            transform: rotate(-30deg) translate(3px, 8px);
+        }
+        span:last-child{
+            transform: rotate(-160deg) translate(-9px, -3px);
+        }  
+    
+    
+}    

@@ -1,0 +1,77 @@
+.wrapp{   
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10% 8% 0% 8%;
+        margin-bottom: 9vh;
+        z-index: 2;
+        .head{
+            align-self: center;
+            color:#10100F;
+            font-size: 24px;
+            font-weight: 600; 
+            letter-spacing: 2px;
+            margin: 0 auto;
+        }
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 8%;
+        z-index: 2;
+        h1{
+            font-family: 'Yeseva One', cursive;
+            text-align: center;
+            font-size: 36px;
+            padding-bottom: 1.8vh;
+        }
+        p{
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-bottom: 15%;
+        }
+        button{
+            outline: none;
+            width: 30vh;
+            padding: 1.5vh 2vh;
+            border-radius: 1.4vh;
+            background-color: white;
+            font-size: 18px;
+            border-color: black;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+    }
+} 
+.wrapp::before{
+    content: '';
+    width: 270px;
+    height: 230px;
+    background-image: url('../../assets/leaf-yellow.png');
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+.wrapp::after{
+    content: '';
+    width: 220px;
+    height: 250px;
+    background-image: url('../../assets/leaf-blue.png');
+    position: absolute;
+    z-index: -2;
+    right: 0px;
+    bottom: 0px;
+    background-repeat: no-repeat;
+}     

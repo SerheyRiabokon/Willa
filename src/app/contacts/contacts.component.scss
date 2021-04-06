@@ -1,0 +1,106 @@
+.wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .content{
+        overflow-y: scroll;
+        padding: 3vh 3vh 0;
+        h3{
+        font-family: 'Yeseva One', cursive;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 39px;
+    }   
+    .form {
+        padding: 0 5%;
+
+        .form-field-wrapp {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+        .error-field{
+            border-bottom: 2px silid red;
+        }    
+        .header-of-input {
+            margin-bottom: 3%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .error-msg {
+            color: #FF0000;
+            font-family: 'Noto Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .label {
+            font-family: 'Noto Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #10100F;
+        }
+        .wrap-checkbox{
+            display: flex;
+            p{
+                margin: 0;
+                align-self: center;
+                font-size: 14px;
+            }
+            input{
+                margin-right: 2vh;
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+            }
+            input:checked{
+                background-color: black;
+            }
+        }
+
+        input {
+            border: 0;
+            padding: 13px 20px;
+            font-family: 'Noto Sans', sans-serif;;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: black;
+            position: relative;
+            border-bottom: 1px solid black;
+            outline: none;
+        }
+        ::placeholder {
+            font-family: 'Noto Sans', sans-serif;;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: #1D1D1B;
+            opacity: 0.5;
+        }
+        }
+        #comment{
+            height: 10vh;
+            margin-bottom: 1vh;
+        }   
+    }
+    .submit{
+        outline: none;
+        width: 30vh;
+        padding: 2vh 1.5vh;
+        border-radius: 2vh;
+        background-color: white;
+        font-size: 18px;
+        border-color: black;
+        font-weight: 400;
+        margin: 0 auto;
+    }
+    } 
+    
+}
+

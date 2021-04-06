@@ -1,0 +1,11 @@
+<header>
+    <div class="burger" *ngIf="pageType == 'home'" [routerLink] = "['nav']">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="plus" *ngIf="pageType == 'nav'" [routerLink] = "['']">
+        <span></span>
+        <span></span>
+    </div>
+</header>    

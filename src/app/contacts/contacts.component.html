@@ -1,0 +1,47 @@
+<app-header-chevrone></app-header-chevrone>
+<div class="wrap">
+    <div class="content">
+        <h3>Email us and we'll call you back.</h3>
+        <form class="form" [formGroup]="joinUs"  (ngSubmit)="submit()">
+            <div class="form-field-wrapp">
+            <div class="header-of-input">
+                <label class="label">Name</label>
+            </div>
+            <input type="text" id="name" placeholder="Full name" formControlName="name">
+            <div class="error-msg" *ngIf="joinUs.get('name').invalid && joinUs.get('name').touched">It's required field</div>
+            </div>
+            <div class="form-field-wrapp">
+            <div class="header-of-input">
+                <label class="label">Phone number</label>
+            </div>
+            <input type="number" id="phone" placeholder="Best number to reach you directly" formControlName="phone">
+            <div class="error-msg" *ngIf="joinUs.get('phone').invalid && joinUs.get('phone').touched">It's required field</div>
+            </div>
+            <div class="form-field-wrapp">
+            <div class="header-of-input">
+                <label class="label">Best time to reach you</label>
+            </div>
+            <div class="wrap-checkbox">
+                <input type="radio" name="time" value="Morning (9am-noon)" formControlName="time"> 
+                    <p>Morning (9am-noon)</p>
+                </div>    
+                <div class="wrap-checkbox">    
+                    <input type="radio" name="time" value="Afternoon (noon-5pm)" formControlName="time">
+                    <p>Afternoon (noon-5pm)</p>
+                </div>    
+                <div class="wrap-checkbox">
+                    <input type="radio" name="time" value="Evening (5pm-8pm)" formControlName="time">
+                    <p>Evening (5pm-8pm)</p>
+                </div>    
+            </div>
+            <div class="form-field-wrapp">
+            <div class="header-of-input">
+                <label class="label">Breif message</label>
+            </div>
+            <input type="text" id="comment" placeholder="Your text here" formControlName="comment">
+            </div>
+            <button class="submit" type="submit">Begin Therapy</button>
+        </form>
+    </div>  
+</div>
+
