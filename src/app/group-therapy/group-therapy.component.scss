@@ -1,21 +1,21 @@
 .wrap{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    .img{
-       background-image: url('../../assets/kylie-lugo.png');
-       height: 286px;
-       width:100%;
-       background-repeat: no-repeat;
-       margin-bottom: 7vh;
-    }
-    h3{
-        font-family: 'Yeseva One', cursive;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 39px;
-        padding: 0 2.5vh;
-    }
+  padding-top: 5%;
+	height: 100%;
+	overflow-y: scroll; 
+  .content{
+		.img{
+			background-image: url('../../assets/kylie-lugo.png');
+			height: 286px;
+			width:100%;
+			background-repeat: no-repeat;
+			margin-bottom: 6vh;
+		}
+		h3{
+			font-family: 'Yeseva One', cursive;
+			font-size: 28px;
+			font-weight: 400;
+			line-height: 39px;
+			padding: 0 2.5vh;
+		}
+	}	
 }

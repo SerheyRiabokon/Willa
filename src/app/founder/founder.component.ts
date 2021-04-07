@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HeaderService } from '../services/header.service'
 
 @Component({
   selector: 'app-founder',
@@ -10,10 +11,13 @@ export class FounderComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private headerService: HeaderService) {
 }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.headerService.typeOfPage = 'founder';
+    //this.headerService.typeOfPage.next('founder');
   }
 
 }

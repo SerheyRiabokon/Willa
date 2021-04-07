@@ -12,7 +12,7 @@ import { ProgramsComponent } from './programs/programs.component';
 import { GroupTherapyComponent } from './group-therapy/group-therapy.component';
 import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
-import { HeaderChevroneComponent } from './header-chevrone/header-chevrone.component';
+import { HeaderService } from './services/header.service';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,7 @@ import { HeaderChevroneComponent } from './header-chevrone/header-chevrone.compo
     ProgramsComponent,
     GroupTherapyComponent,
     AboutComponent,
-    HeaderComponent,
-    HeaderChevroneComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,7 @@ import { HeaderChevroneComponent } from './header-chevrone/header-chevrone.compo
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,16 +1,12 @@
-<app-header [pageType]="'nav'"></app-header>
 <div class="wrapp">
-    <header>
-        <div class="head">WILA</div>
-    </header>
     <div class="nav-wrap">
         <ul>
-            <li [routerLink]="['']">Home</li>
-            <li [routerLink]="['about']">About</li>
-            <li [routerLink]="['group-therapy']">Group Therapy</li>
-            <li [routerLink]="['programs']">Our Programs</li>
-            <li [routerLink]="['founder']">Our Founder</li>
-            <li [routerLink]="['contacts']">Contact Us</li>
+            <li (click)="goToPage('')">Home</li>
+            <li (click)="goToPage('nav/about')">About</li>
+            <li (click)="goToPage('nav/group-therapy')">Group Therapy</li>
+            <li (click)="goToPage('nav/programs')">Our Programs</li>
+            <li (click)="goToPage('nav/founder')">Our Founder</li>
+            <li (click)="goToPage('nav/contacts')">Contact Us</li>
         </ul>
     </div>
 </div>

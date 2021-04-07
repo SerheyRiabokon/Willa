@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HeaderService } from '../services/header.service'
 
 
 @Component({
@@ -11,10 +12,14 @@ export class AboutComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private headerService: HeaderService
+    ) {
 }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.headerService.typeOfPage = 'about';
+    //this.headerService.typeOfPage.next('about');
   }
 
 }

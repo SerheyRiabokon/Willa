@@ -1,24 +1,9 @@
 .wrapp{   
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    header{
-        display: flex;
-        justify-content: space-between;
-        padding: 10% 8% 0% 8%;
-        margin-bottom: 9vh;
-        z-index: 2;
-        .head{
-            align-self: center;
-            color:#10100F;
-            font-size: 24px;
-            font-weight: 600; 
-            letter-spacing: 2px;
-            margin: 0 auto;
-        }
-    }
+    //position: absolute;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
     .content{
         display: flex;
         flex-direction: column;

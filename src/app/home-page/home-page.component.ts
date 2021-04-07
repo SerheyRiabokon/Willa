@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HeaderService } from '../services/header.service'
 
 @Component({
   selector: 'app-home-page',
@@ -7,14 +8,15 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
-pageType="home";
   
   constructor(
     private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router,
+    private headerService: HeaderService) {
 }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.headerService.typeOfPage = 'home';
+    //this.headerService.typeOfPage.next('home');
   }
 }

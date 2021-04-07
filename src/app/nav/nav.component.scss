@@ -5,10 +5,11 @@
     right: 0;
     bottom: 0;
     background: #eeeeee;
+    padding-top: 100px;
     header{
         display: flex;
         justify-content: space-between;
-        padding: 10% 8% 0% 8%;
+        padding: 8% 10% 0% 8%;
         margin-bottom: 12vh;
         z-index: 2;
         .head{

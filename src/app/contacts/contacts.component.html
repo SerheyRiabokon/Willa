@@ -1,4 +1,3 @@
-<app-header-chevrone></app-header-chevrone>
 <div class="wrap">
     <div class="content">
         <h3>Email us and we'll call you back.</h3>
@@ -8,14 +7,20 @@
                 <label class="label">Name</label>
             </div>
             <input type="text" id="name" placeholder="Full name" formControlName="name">
-            <div class="error-msg" *ngIf="joinUs.get('name').invalid && joinUs.get('name').touched">It's required field</div>
+            <div class="error-msg" *ngIf="joinUs.get('name').invalid && joinUs.get('name').touched">
+                <small>It's required field</small>
+                <!-- <small> Only Latters</small> -->
+                <pre></pre>
+            </div>
             </div>
             <div class="form-field-wrapp">
             <div class="header-of-input">
                 <label class="label">Phone number</label>
             </div>
             <input type="number" id="phone" placeholder="Best number to reach you directly" formControlName="phone">
-            <div class="error-msg" *ngIf="joinUs.get('phone').invalid && joinUs.get('phone').touched">It's required field</div>
+            <div class="error-msg" *ngIf="joinUs.get('phone').invalid && joinUs.get('phone').touched">
+                <small>It's required field</small>
+            </div>
             </div>
             <div class="form-field-wrapp">
             <div class="header-of-input">

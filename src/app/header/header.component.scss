@@ -1,44 +1,99 @@
 header{ 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px; 
-    display: flex;
-    justify-content: flex-end; 
-    z-index: 100;
-    .burger{
-        padding: 45px 30px 0;
-        outline: none;
-        span{
-            display: block;
-            width: 36px;
-            height: 2px;
-            margin-bottom: 7px;
-            position: relative;
-            background: #10100F;;
-            border-radius: 3px;
-        }    
-    }
-   .plus{
-        padding: 45px 30px 0;
-        outline: none;
-        span{
-            display: block;
-            width: 36px;
-            height: 2px;
-            margin-bottom: 7px;
-            position: relative;
-            background: #10100F;
-        }
-        span:first-child{
-            transition-duration: 0.5s;
-            transform: rotate(-45deg) translate(-6px, -4px);
-        }
-        span:last-child{
-            transition-duration: 0.5s;
-            transform: rotate(45deg) translate(-8px, -1px);
-        }  
-        }
-    
+	height: 55px; 
+	display: flex;
+	justify-content: space-between; 
+	z-index: 100;
+	padding-top: 10px;
+	.chevrone{
+		outline: none;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		opacity: 0.75;
+		background-color: white;
+		width: 34px;
+		height: 22px;
+		span{
+			display: block;
+			width: 22px;
+			height: 2px;
+			margin-bottom: 7px;
+			position: relative;
+			background: #10100F;
+			opacity: 0.8;
+		}
+		span:first-child{
+			transform: rotate(-30deg) translate(3px, 8px);
+		}
+		span:last-child{
+			transform: rotate(-160deg) translate(-9px, -3px);
+		}  
+	}
+	
+	.head{
+		align-self: center;
+		color:#10100F;
+		font-size: 24px;
+		font-weight: 600; 
+		letter-spacing: 2px;
+		margin: 0 auto;
+		z-index: 100;
+	}
+	.menuToggle{
+		display: block;
+		position: relative;
+		top: 10px;
+		left: -18px;
+		z-index: 1;
+		user-select: none;
+		height: 32px;
+	}
+	.menuToggle input{
+		display: block;
+		width: 30px;
+		height: 25px;
+		position: absolute;
+		top: 0px;
+		left: -2px;
+		opacity: 0;
+		z-index: 2;
+	}
+	.menuToggle span{
+		display: block;
+		width: 32px;
+		height: 3px;
+		margin-bottom: 4px;
+		position: relative;
+	 background: #525252;
+		border-radius: 3px;
+		z-index: 1;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+								background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+								opacity 0.55s ease;
+	}
+	.menuToggle span:first-child
+	{
+		transform-origin: 0% 0%;
+	}
+	.menuToggle span:nth-last-child(2){
+		transform-origin: 0% 100%;
+	}
+	.menuToggle input:checked ~ span
+	{
+		opacity: 1;
+		transform: rotate(45deg) translate(-3px, -11px);
+		background: #232323;
+	}
+	.menuToggle input:checked ~ span:nth-last-child(3)
+	{
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	.menuToggle input:checked ~ span:nth-last-child(2)
+	{
+		transform: rotate(-45deg) translate(-7px, 16px);
+	}
+	
+
 }    

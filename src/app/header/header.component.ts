@@ -1,4 +1,6 @@
-import { Component, ElementRef, Input, OnInit, Output} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HeaderService } from '../services/header.service'
 
 @Component({
   selector: 'app-header',
@@ -6,14 +8,42 @@ import { Component, ElementRef, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
-  @Input()pageType = '';
+ 
+  showHeader = true;
 
   constructor(
-    private element: ElementRef,
-  ) { }
+    private route: ActivatedRoute,
+    private router: Router,
+    private headerService: HeaderService
+  ) {}
 
   ngOnInit() {
   }
 
+  goToNavAndBack(){
+    if(this.headerService.typeOfPage == 'nav'){
+      this.router.navigate([''], {replaceUrl: true});
+      this.showHeader = true;
+    }else if(this.headerService.typeOfPage == 'home'){
+      this.router.navigate(['nav'], {replaceUrl: true});
+      this.showHeader = true;
+    }else{
+      this.router.navigate(['nav'], {replaceUrl: true});
+      this.showHeader = false;
+    }
+    // this.headerService.typeOfPage.subscribe(res=>{
+    //   if(res == 'nav'){
+    //     this.router.navigate([''], {replaceUrl: true});
+    //     this.showHeader = true;
+    //   }else if(res == 'home'){
+    //     this.router.navigate(['nav'], {replaceUrl: true});
+    //     this.showHeader = true;
+    //   }else{
+    //     this.router.navigate(['nav'], {replaceUrl: true});
+    //     this.showHeader = false;
+    //   }
+    // })
+    
+  }
+  
 }
