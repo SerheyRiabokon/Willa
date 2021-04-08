@@ -17,7 +17,7 @@ export class GroupTherapyComponent implements OnInit {
 
   ngOnInit(){
     this.headerService.typeOfPage = 'group';
-    //this.headerService.typeOfPage.next('group');
+    this.headerService.typeOfPageBeh.next('group');
   }
 
 }

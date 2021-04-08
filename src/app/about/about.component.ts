@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(){
     this.headerService.typeOfPage = 'about';
-    //this.headerService.typeOfPage.next('about');
+    this.headerService.typeOfPageBeh.next('about');
   }
 
 }

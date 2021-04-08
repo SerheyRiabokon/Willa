@@ -1,13 +1,8 @@
 <header>
-	<!-- <div class="chevrone" [routerLink] = "['']">
-			<span class="span"></span>
-			<span class="span"></span>
-	</div> -->
-	<div class="head">WILA</div>
-  <div class="menuToggle" (click)="goToNavAndBack()" >
-		<input type="checkbox">
-		<span></span>
-		<span></span>
-		<span></span>
+	<div class="head" [ngClass]="showHeader ? '' : 'hide'" >WILA</div>
+  <div  id='burger'class="menuToggle" [ngClass]="!toggleStatus ? '': 'moved'" (click)="goToNavAndBack()" >
+		<span [ngClass]="whiteStyle ? 'white' : ''"></span>
+		<span [ngClass]="whiteStyle ? 'white' : ''"></span>
+		<span [ngClass]="whiteStyle ? 'white' : ''"></span>
   </div>
 </header>    

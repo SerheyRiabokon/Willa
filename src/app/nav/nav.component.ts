@@ -1,16 +1,18 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AfterViewChecked, Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderService } from '../services/header.service';
 import { NavigationExtras } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit{
  
   navExtras: NavigationExtras;
+  sub: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,8 +23,8 @@ export class NavComponent implements OnInit {
 
   ngOnInit(){
     this.headerService.typeOfPage = 'nav';
-    //this.headerService.typeOfPage.next('nav');
-    console.log(this.navExtras);
+    this.headerService.typeOfPageBeh.next('nav');
+    this.sub = this.headerService.typeOfPageBeh.subscribe();
   }
 
   goToPage(type) {
@@ -31,6 +33,7 @@ export class NavComponent implements OnInit {
         type:type
       }
     }
-      this.router.navigate(([type]), this.navExtras);
+      this.router.navigate(([type]), {queryParams: {title: type, si:true}});
   }
 }
+ 

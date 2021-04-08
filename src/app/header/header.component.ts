@@ -10,40 +10,57 @@ import { HeaderService } from '../services/header.service'
 export class HeaderComponent implements OnInit {
  
   showHeader = true;
+  whiteStyle = false;
+  checkbox;
+  toggleStatus = false;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private headerService: HeaderService
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
+    this.checkbox = document.querySelector('.checkbox');
   }
 
   goToNavAndBack(){
     if(this.headerService.typeOfPage == 'nav'){
       this.router.navigate([''], {replaceUrl: true});
-      this.showHeader = true;
-    }else if(this.headerService.typeOfPage == 'home'){
-      this.router.navigate(['nav'], {replaceUrl: true});
-      this.showHeader = true;
     }else{
       this.router.navigate(['nav'], {replaceUrl: true});
-      this.showHeader = false;
     }
-    // this.headerService.typeOfPage.subscribe(res=>{
-    //   if(res == 'nav'){
-    //     this.router.navigate([''], {replaceUrl: true});
-    //     this.showHeader = true;
-    //   }else if(res == 'home'){
-    //     this.router.navigate(['nav'], {replaceUrl: true});
-    //     this.showHeader = true;
-    //   }else{
-    //     this.router.navigate(['nav'], {replaceUrl: true});
-    //     this.showHeader = false;
-    //   }
-    // })
-    
+    this.headerService.typeOfPageBeh.subscribe(res=>{
+      if(res == 'group'){
+        this.showHeader = false;
+        this.whiteStyle = false;
+        this.toggleStatus = false;
+      }else if(res == 'programs'){
+        this.showHeader = false;
+        this.whiteStyle = true;
+        this.toggleStatus = false;
+      }else if(res == 'founder'){
+        this.showHeader = false;
+        this.whiteStyle = true;
+        this.toggleStatus = false;
+      }else if(res == 'contacts'){
+        this.showHeader = false;
+        this.whiteStyle = false;
+        this.toggleStatus = false;
+      }else if(res == 'about'){
+        this.showHeader = true;
+        this.whiteStyle = false;
+        this.toggleStatus = false;
+      }else if(res == 'nav'){
+        this.showHeader = true;
+        this.whiteStyle = false;
+        this.toggleStatus = true;
+      } else{
+        this.toggleStatus = false;
+        this.showHeader = true;
+        this.whiteStyle = false;
+      }   
+    })  
   }
-  
 }

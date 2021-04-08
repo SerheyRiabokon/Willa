@@ -1,4 +1,8 @@
 <div class="wrap">
+    <div [ngClass]="!message ? '':'pop-up-animation'" class="pop-up">
+        <img src="../../assets/success-message-icon.svg" alt="">
+        <p>Succses</p>
+    </div>
     <div class="content">
         <h3>Email us and we'll call you back.</h3>
         <form class="form" [formGroup]="joinUs"  (ngSubmit)="submit()">

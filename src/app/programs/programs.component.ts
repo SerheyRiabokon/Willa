@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderService } from '../services/header.service'
 
@@ -7,7 +7,7 @@ import { HeaderService } from '../services/header.service'
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss']
 })
-export class ProgramsComponent implements OnInit {
+export class ProgramsComponent implements OnInit{
 
   constructor(
     private route: ActivatedRoute,
@@ -17,7 +17,8 @@ export class ProgramsComponent implements OnInit {
 
   ngOnInit(){
     this.headerService.typeOfPage = 'programs';
-    //this.headerService.typeOfPage.next('programs');
+    this.headerService.typeOfPageBeh.next('programs');
   }
+  
 
 }

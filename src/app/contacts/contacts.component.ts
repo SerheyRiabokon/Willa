@@ -11,6 +11,7 @@ import { HeaderService } from '../services/header.service'
 export class ContactsComponent implements OnInit {
 
   joinUs: FormGroup;
+  message = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,7 +23,7 @@ export class ContactsComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
     this.headerService.typeOfPage = 'contacs';
-    //this.headerService.typeOfPage.next('contacts');  
+    this.headerService.typeOfPageBeh.next('contacts');  
   }
 
   initForm() {
@@ -49,6 +50,11 @@ export class ContactsComponent implements OnInit {
  
   submit(){
     if (!this.joinUs.invalid) {
+      this.message = true;
+      setTimeout(()=>{
+        this.message = false;
+      },6000)
+
       const person = {
         user: {
           name: this.joinUs.value.name,

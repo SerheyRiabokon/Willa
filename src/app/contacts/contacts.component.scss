@@ -1,5 +1,34 @@
 .wrap{
     height: 100%;
+    .pop-up{
+        position: absolute;
+        top: 0;
+        left:0;
+        right: 0;
+        height: 65px;
+        display: none;
+        padding: 15px 15px 0px;
+        background-color: rgb(130, 211, 243);
+        z-index: 100;
+        justify-content: center;
+        img{
+            margin-right: 10px;
+            margin-top: 10px;
+            width: 40px;
+            height: 40px;
+        }
+        p{
+            font-size: 18px;
+            color: rgb(2, 34, 2);
+            font-family: 'Yeseva One', cursive;
+            align-self: center;
+
+        }
+    }
+    .pop-up-animation{
+        display: flex;
+        animation: line-animation 6s cubic-bezier(0.83, 0.04, 0, 1.16) both;
+    }
     .content{
         overflow-y: scroll;
         padding: 0vh 3vh 0;
@@ -122,5 +151,24 @@
     right: 0px;
     bottom: 184px;
     background-repeat: no-repeat;
-}     
+} 
+  @keyframes line-animation{
+
+    0%{
+    opacity: 1;
+    }
+    50%{
+    opacity: 1;
+    }
+    75%{
+     opacity: 0.95;   
+    }
+    85%{
+        opacity: 0.89;
+    }
+    100%{
+    opacity: 0;
+    }  
+  }
+
 
