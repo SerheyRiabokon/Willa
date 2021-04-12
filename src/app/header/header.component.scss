@@ -1,38 +1,35 @@
 header{ 
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 	height: 55px; 
-	display: flex;
-	justify-content: space-between; 
 	z-index: 100;
-	padding-top: 26px;
+	padding-top: 30px;
+	box-sizing: border-box;
 	.head{
-		align-self: center;
+		text-align: center;
 		color:#10100F;
 		font-size: 24px;
 		font-weight: 600; 
 		letter-spacing: 2px;
-		margin: 0 auto;
-		z-index: 100;
 	}
 	.hide{
 		opacity: 0;
 	}
 	.menuToggle{
 		display: block;
-		position: relative;
-		top: 10px;
-		left: -18px;
-		z-index: 1;
-		user-select: none;
-		height: 32px;
+		position: absolute;
+		top: 28px;
+		right: 18px;
 		cursor: pointer;
-		padding-top: 3px;
+		padding: 5px;
 	}
 	.menuToggle span{
 		display: block;
 		width: 32px;
 		height: 3px;
 		margin-bottom: 4px;
-		position: relative;
 	 	background-color: #525252;
 		border-radius: 3px;
 		z-index: 1;

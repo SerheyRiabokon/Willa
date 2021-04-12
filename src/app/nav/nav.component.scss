@@ -1,36 +1,25 @@
 .wrapp{   
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: #eeeeee;
-    padding-top: 100px;
-    header{
-        display: flex;
-        justify-content: space-between;
-        padding: 8% 10% 0% 8%;
-        margin-bottom: 12vh;
-        z-index: 2;
-        .head{
-            align-self: center;
-            color:#10100F;
-            font-size: 24px;
-            font-weight: 600; 
-            letter-spacing: 2px;
-            margin: 0 auto;
+    height: 100vh;
+    padding: 85px 0 20px;
+    box-sizing: border-box;
+
+    .nav-wrap{
+        padding: 6%;
+        overflow-y: scroll;
+        height: 100%;
+        box-sizing: border-box;
+        ul{
+            margin-top: 0;
+            li{
+                font-size: 28px;
+                font-family: 'Noto Sans', sans-serif;
+                font-weight: 400;
+                margin-bottom: 5.6vh;
+                list-style: none;
+                cursor: pointer;
+            }
         }
         
-    }
-    .nav-wrap{
-        padding: 0 8%;
-        li{
-            font-size: 28px;
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 400;
-            margin-bottom: 5.6vh;
-            list-style: none;
-            cursor: pointer;
-        }
     }
 }    

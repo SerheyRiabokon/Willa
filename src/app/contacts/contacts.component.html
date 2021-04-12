@@ -1,54 +1,52 @@
 <div class="wrap">
-    <div [ngClass]="!message ? '':'pop-up-animation'" class="pop-up">
-        <img src="../../assets/success-message-icon.svg" alt="">
-        <p>Succses</p>
-    </div>
-    <div class="content">
-        <h3>Email us and we'll call you back.</h3>
-        <form class="form" [formGroup]="joinUs"  (ngSubmit)="submit()">
-            <div class="form-field-wrapp">
-            <div class="header-of-input">
-                <label class="label">Name</label>
-            </div>
-            <input type="text" id="name" placeholder="Full name" formControlName="name">
-            <div class="error-msg" *ngIf="joinUs.get('name').invalid && joinUs.get('name').touched">
-                <small>It's required field</small>
-            </div>
-            </div>
-            <div class="form-field-wrapp">
-            <div class="header-of-input">
-                <label class="label">Phone number</label>
-            </div>
-            <input type="number" id="phone" placeholder="Best number to reach you directly" formControlName="phone">
-            <div class="error-msg" *ngIf="joinUs.get('phone').invalid && joinUs.get('phone').touched">
-                <small>It's required field</small>
-            </div>
-            </div>
-            <div class="form-field-wrapp">
-            <div class="header-of-input">
-                <label class="label">Best time to reach you</label>
-            </div>
-            <div class="wrap-checkbox">
-                <input type="radio" name="time" value="Morning (9am-noon)" formControlName="time"> 
-                    <p>Morning (9am-noon)</p>
-                </div>    
-                <div class="wrap-checkbox">    
-                    <input type="radio" name="time" value="Afternoon (noon-5pm)" formControlName="time">
-                    <p>Afternoon (noon-5pm)</p>
-                </div>    
-                <div class="wrap-checkbox">
-                    <input type="radio" name="time" value="Evening (5pm-8pm)" formControlName="time">
-                    <p>Evening (5pm-8pm)</p>
-                </div>    
-            </div>
-            <div class="form-field-wrapp">
-            <div class="header-of-input">
-                <label class="label">Breif message</label>
-            </div>
-            <input type="text" id="comment" placeholder="Your text here" formControlName="comment">
-            </div>
-            <button class="submit" [disabled]="joinUs.invalid" type="submit">Begin Therapy</button>
-        </form>
-    </div>  
+	<div [ngClass]="!message ? '':'pop-up-animation'" class="pop-up">
+		<img src="../../assets/success-message-icon.svg" alt="">
+		<p>Succses</p>
+	</div>
+	<div class="content">
+		<h3>Email us and we'll call you back.</h3>
+		<form class="form" [formGroup]="joinUs"  (ngSubmit)="submit()">
+			<div class="form-field-wrapp">
+				<label class="label" for='name'>Name</label>
+				<input type="text" id="name" placeholder="Full name" formControlName="name">
+				<div class="error-msg" *ngIf="joinUs.get('name').invalid && joinUs.get('name').touched">
+					<small>It's required field</small>
+				</div>
+			</div>
+			<div class="form-field-wrapp">
+				<label class="label" for='phone'>Phone number</label>
+				<input type="number" id="phone" placeholder="Best number to reach you directly" formControlName="phone">
+				<div class="error-msg" *ngIf="joinUs.get('phone').invalid && joinUs.get('phone').touched">
+					<small>It's required field</small>
+				</div>
+			</div>
+			<div class="form-field-wrapp">
+				<label class="label">Best time to reach you</label>
+				<label for='checkbox1' class="wrap-checkbox">
+					<input type="radio"  class='radio' name="time" id='checkbox1' value="Morning (9am-noon)" formControlName="time"> 
+					<div class="checkbox-box"></div>
+					<p>Morning (9am-noon)</p>
+				</label>    
+				<label for='checkbox2' class="wrap-checkbox">    
+					<input type="radio" class='radio' name="time" id='checkbox2' value="Afternoon (noon-5pm)" formControlName="time">
+					<div class="checkbox-box"></div>
+					<p>Afternoon (noon-5pm)</p>
+				</label>    
+				<label for='checkbox3' class="wrap-checkbox">
+					<input type="radio" class='radio' name="time" id='checkbox3' value="Evening (5pm-8pm)" formControlName="time">
+					<div class="checkbox-box"></div>
+					<p>Evening (5pm-8pm)</p>
+				</label>    
+			</div>
+			<div class="form-field-wrapp">
+				<label for='comment' class="label" >Breif message</label>
+				<textarea id="comment" placeholder="Your text here" formControlName="comment"></textarea>
+			</div>
+			<button class="submit" [disabled]="joinUs.invalid" type="submit">Begin Therapy</button>
+		</form>
+		<footer>
+			© All rights reserved.
+		</footer>
+	</div>  
 </div>
 

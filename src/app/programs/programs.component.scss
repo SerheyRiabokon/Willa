@@ -1,25 +1,21 @@
 .wrap{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	background-color: #636C92;
 	color: white;
-	padding: 12vh 3vh 0 3vh;
+	padding: 12vh 3vh 2vh 3vh;
+	height: 100vh;
+	box-sizing: border-box;
 	.content{
-		display:flex;
-		flex-direction: column;
 		overflow-y: scroll;
 		height: 100%;
 		h3{
-			font-family: 'Yeseva One', cursive;
+			font-family: 'Yeseva One';
 			font-size: 22px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 27px;
 			text-align: left;
 			margin-bottom: 3vh;
+			margin-top: 0px;
 		} 
 		p{
 			font-family: 'Noto Sans', sans-serif;;
@@ -29,6 +25,7 @@
 			line-height: 24px;
 			text-align: left;
 			margin-bottom: 3.5vh;
+			margin-top: 0;
 		}
 	} 
 }
