@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HeaderService } from '../services/header.service'
 
 @Component({
@@ -15,8 +14,6 @@ export class ContactsComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
     private headerService: HeaderService) {
 }
 
@@ -30,11 +27,11 @@ export class ContactsComponent implements OnInit {
     this.joinUs = this.formBuilder.group({
       name: new FormControl('',Validators.compose([
         Validators.required,
-        this.textValidator, Validators.minLength(3)])),
+        this.textValidator])),
       phone: new FormControl('', Validators.compose([
         Validators.required,
         Validators.minLength(10)])),
-      time: new FormControl(Validators.required),
+      time: new FormControl(),
       comment: new FormControl()  
     });
   }

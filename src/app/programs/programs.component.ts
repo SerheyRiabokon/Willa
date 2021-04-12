@@ -10,8 +10,6 @@ import { HeaderService } from '../services/header.service'
 export class ProgramsComponent implements OnInit{
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
     private headerService: HeaderService) {
 }
 

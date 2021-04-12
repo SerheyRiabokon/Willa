@@ -1,5 +1,6 @@
 .wrap{
     height: 100%;
+    padding-bottom: 20px;
     .pop-up{
         position: absolute;
         top: 0;
@@ -109,6 +110,7 @@
             font-weight: normal;
             font-size: 16px;
             color: black;
+            background: rgba(255, 255, 255, 0.1);
             position: relative;
             border-bottom: 1px solid black;
             outline: none;
@@ -137,6 +139,10 @@
         border-color: black;
         font-weight: 400;
         margin: 0 auto;
+        cursor: pointer;
+    }
+    .submit:hover{
+        background-color: rgb(233, 233, 233); 
     }
     } 
     

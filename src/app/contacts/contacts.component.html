@@ -13,8 +13,6 @@
             <input type="text" id="name" placeholder="Full name" formControlName="name">
             <div class="error-msg" *ngIf="joinUs.get('name').invalid && joinUs.get('name').touched">
                 <small>It's required field</small>
-                <!-- <small> Only Latters</small> -->
-                <pre></pre>
             </div>
             </div>
             <div class="form-field-wrapp">
@@ -49,7 +47,7 @@
             </div>
             <input type="text" id="comment" placeholder="Your text here" formControlName="comment">
             </div>
-            <button class="submit" type="submit">Begin Therapy</button>
+            <button class="submit" [disabled]="joinUs.invalid" type="submit">Begin Therapy</button>
         </form>
     </div>  
 </div>

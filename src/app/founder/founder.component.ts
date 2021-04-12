@@ -16,7 +16,7 @@ export class FounderComponent implements OnInit {
 }
 
   ngOnInit(){
-    //this.headerService.typeOfPage = 'founder';
+    this.headerService.typeOfPage = 'founder';
     this.headerService.typeOfPageBeh.next('founder');
   }
 

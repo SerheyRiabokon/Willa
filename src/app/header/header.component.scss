@@ -3,7 +3,7 @@ header{
 	display: flex;
 	justify-content: space-between; 
 	z-index: 100;
-	padding-top: 10px;
+	padding-top: 26px;
 	.head{
 		align-self: center;
 		color:#10100F;
@@ -24,6 +24,8 @@ header{
 		z-index: 1;
 		user-select: none;
 		height: 32px;
+		cursor: pointer;
+		padding-top: 3px;
 	}
 	.menuToggle span{
 		display: block;

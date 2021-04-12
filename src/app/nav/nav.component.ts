@@ -28,12 +28,7 @@ export class NavComponent implements OnInit{
   }
 
   goToPage(type) {
-    this.navExtras = {
-      state: {
-        type:type
-      }
-    }
-      this.router.navigate(([type]), {queryParams: {title: type, si:true}});
+      this.router.navigate(([type]));
   }
 }
  

@@ -8,7 +8,7 @@ import { HeaderService } from '../services/header.service'
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit, OnDestroy {
+export class HomePageComponent implements OnInit{
   sub: Subscription;
   constructor(
     private route: ActivatedRoute,
@@ -20,11 +20,5 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.headerService.typeOfPage = 'home';
     this.headerService.typeOfPageBeh.next('home');
     this.sub = this.headerService.typeOfPageBeh.subscribe();
-    console.log(1)
-  }
-  
-  ngOnDestroy(){
-  //   this.sub.unsubscribe();
-  //   console.log(2);
   }
 }
